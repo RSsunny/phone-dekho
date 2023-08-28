@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone hunter</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class=" text-black">
+<header>
+    <nav class="max-w-7xl mx-auto px-5 py-10 flex justify-center">
+        <div class="flex gap-2">
+            <input id="input-fild" type="text" placeholder="search hear..." class="input input-bordered w-96 text-white" />
+            <button onclick="heandelSearch()" class="btn btn-secondary">Search</button>
+        </div>
+        
+    </nav>
+</header>
+<main>
+    <section class="max-w-7xl mx-auto px-5 my-10">
+        <div id="load-spring" class="text-center my-40 hidden">
+          <span class="loading loading-spinner text-primary"></span>
+          <span class="loading loading-spinner text-secondary"></span>
+          <span class="loading loading-spinner text-accent"></span>
+          <span class="loading loading-spinner text-neutral"></span>
+          <span class="loading loading-spinner text-info"></span>
+          <span class="loading loading-spinner text-success"></span>
+          <span class="loading loading-spinner text-warning"></span>
+          <span class="loading loading-spinner text-error"></span>
+        </div>
+        <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-5 ">
+        </div>
+        <div class="text-center">
+          <button onclick="showall()" id="more-btn" class="px-8 py-3 border text-2xl border-yellow-600 text-white font-semibold my-10 hidden">load more...</button>
+        </div>
+    </section>
+    <section>
+    <div class="">
+      <dialog id="show_modal" class="modal text-white">
+      <form method="dialog" class="modal-box">
+      <div id="show-details-container">
+            
+      </div>
+      <div class="modal-action">
+      <button class="btn">Close</button>
+      </div>
+      </form>
+      </dialog>
+    </div>
+    </section>
+</main>  
+<footer>
+
+</footer>
+<!-- script -->
+<script src="./js/main.js"></script>
+</body>
+</html>
